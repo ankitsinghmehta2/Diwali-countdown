@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Diwali Countdown</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <div>
+        <h1>COUNTDOWN <span>TIMER</span> </h1>
+        <h1>HAPPY DIWALI <span>TO ALL</span></h1>
+
+        <p id="demo"> </p>
+        <BUTTON>SUPRISE  in 1 november 2024 </BUTTON>
+    </div>
+
+
+</body>
+
+<script>
+    var dest = new Date("NOV 1,2024 10:00:00 ").getTime();
+    var x = setInterval(function () {
+        var now = new Date().getTime();
+        var diff = dest - now
+        var days = Math.floor(diff / (1000 * 60 * 60 * 24))
+        console.log(days);
+        var hour = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60))
+        console.log(hour);
+        var minute = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
+        console.log(minute);
+        var second = Math.floor((diff % (1000 * 60)) / 1000)
+        console.log(second);
+        document.getElementById("demo").innerHTML = days + "d, " + hour + "hrs: " + minute + "m: " + second + "s"
+    })
+</script>
+
+</html>
